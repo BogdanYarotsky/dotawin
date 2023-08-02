@@ -45,4 +45,4 @@ jobs:
           app-name: dotawinclient
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-          package: ./node-app # Deploy the downloaded artifact directory
+          package: .

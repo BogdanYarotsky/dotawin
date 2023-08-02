@@ -2,7 +2,7 @@ name: clientDeployment
 run-name: ${{ github.actor }} deploys client
 on: [push]
 jobs:
-  run-worker-tests:
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -16,3 +16,9 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v3
+        with:
+          name: node-app
+          path: dist # This should be your distribution path, not the root path

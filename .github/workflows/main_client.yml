@@ -1,5 +1,5 @@
-name: workerTests
-run-name: ${{ github.actor }} is testing worker
+name: clientDeployment
+run-name: ${{ github.actor }} deploys client
 on: [push]
 jobs:
   run-worker-tests:
